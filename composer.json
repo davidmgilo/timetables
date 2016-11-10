@@ -2,7 +2,8 @@
     "name": "scool/timetables",
     "type": "library",
     "require": {
-        "laravel/framework": "^5.3"
+        "laravel/framework": "^5.3",
+        "fzaninotto/faker": "^1.6"
     },
     "license": "MIT",
     "authors": [
@@ -10,5 +11,8 @@
             "name": "David Martinez",
             "email": "davidmgilo@gmail.com"
         }
-    ]
+    ],
+    "autoload": {
+        "psr-4": {"Scool\\Timetables\\": "src"}
+    }
 }
