@@ -1,10 +1,10 @@
 <?php
 
-namespace Scool\Timetables;
+namespace Scool\Timetables\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
 class Desiratum extends Model
 {
-    //
+    //fillable
 }
