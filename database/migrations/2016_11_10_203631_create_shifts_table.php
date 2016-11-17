@@ -36,5 +36,6 @@ class CreateShiftsTable extends Migration
     public function down()
     {
         Schema::dropIfExists('shifts');
+        Schema::dropIfExists('shift_timeslot');
     }
 }
