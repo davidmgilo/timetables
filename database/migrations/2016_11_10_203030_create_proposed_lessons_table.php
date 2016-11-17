@@ -15,8 +15,12 @@ class CreateProposedLessonsTable extends Migration
     {
         Schema::create('proposed_lessons', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('location_id')->unsigned();
             $table->timestamps();
         });
+
+        //Ha de tindre id, location_id, timestamps, userstamps, desideratum_id,
+        //relacions amb User i amb Studysubmodule
     }
 
     /**
