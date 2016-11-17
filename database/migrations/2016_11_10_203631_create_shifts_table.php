@@ -19,6 +19,13 @@ class CreateShiftsTable extends Migration
             $table->string('name');
             $table->timestamps();
         });
+
+        Schema::create('shift_timeslot', function (Blueprint $table) {
+            $table->integer('shift_id')->unsigned();
+            $table->integer('timeslot_id')->unsigned();
+            $table->timestamps();
+            $table->unique(['shift_id', 'timeslot_id']);
+        });
     }
 
     /**
