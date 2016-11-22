@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="Scool timetables Test Suite" tests="1" assertions="1" failures="0" errors="0" time="0.001193">
-    <testsuite name="MisTestosTest" file="/home/alumne/Code/scool/timetables/tests/MisTestosTest.php" tests="1" assertions="1" failures="0" errors="0" time="0.001193">
-      <testcase name="it_shows_shifts" class="MisTestosTest" file="/home/alumne/Code/scool/timetables/tests/MisTestosTest.php" line="14" assertions="1" time="0.001193"/>
+  <testsuite name="Scool timetables Test Suite" tests="1" assertions="1" failures="0" errors="0" time="0.000951">
+    <testsuite name="MisTestosTest" file="/home/alumne/Code/scool/timetables/tests/MisTestosTest.php" tests="1" assertions="1" failures="0" errors="0" time="0.000951">
+      <testcase name="it_shows_shifts" class="MisTestosTest" file="/home/alumne/Code/scool/timetables/tests/MisTestosTest.php" line="14" assertions="1" time="0.000951"/>
     </testsuite>
   </testsuite>
 </testsuites>
