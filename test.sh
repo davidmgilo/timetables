@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 cd ../timetables_test
-phpunit
+phpunit tests/TimetablesTest.php
 cd -
