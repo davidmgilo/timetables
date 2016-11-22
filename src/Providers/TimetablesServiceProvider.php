@@ -29,7 +29,8 @@ class TimetablesServiceProvider extends ServiceProvider
     private function publishTests()
     {
         $this->publishes(
-            SCOOL_TIMETABLES_PATH.'/tests/TimetablesTest.php','tests/TimetablesTest.php'
+            [SCOOL_TIMETABLES_PATH.'/tests/TimetablesTest.php' =>'tests/TimetablesTest.php'],
+            'scool_timetables'
         );
     }
 
