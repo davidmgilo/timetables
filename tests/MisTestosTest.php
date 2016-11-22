@@ -15,7 +15,8 @@ class MisTestosTest extends PHPUnit_Framework_TestCase
     {
       // Preparació
         // Execució
-        // Assertions: comprovacions
+        // Assertions: comprovacions/ confirmacions
+        $this->assertTrue(true);
     }
 
 }
