@@ -11,8 +11,11 @@ class MisTestosTest extends PHPUnit_Framework_TestCase
      * @test
      * @group failing
      */
-    public function it_shows_shifts(){
-      echo "adaadad";
+    public function it_shows_shifts()
+    {
+      // Preparació
+        // Execució
+        // Assertions: comprovacions
     }
 
 }
