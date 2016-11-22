@@ -13,10 +13,23 @@ PSRs you support to avoid any confusion with users and contributors.
 
 ## Install
 
-Via Composer
+Via Composer in a laravel project
 
 ``` bash
 $ composer require scool/timetables
+```
+
+Add to file **config/app.php** the TimetablesServiceProvider:
+```php
+/*
+* Package Service Providers
+*/
+Scool\Timetables\Providers\TimetablesServiceProviders::class,
+```
+
+And publish files with:
+```bash
+php artisan vendor:publish --tag=scool_timetables
 ```
 
 ## Usage

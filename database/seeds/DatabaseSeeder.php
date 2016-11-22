@@ -12,5 +12,6 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // $this->call(UsersTableSeeder::class);
+        //Seeders on directory src/Database/Seeds -> see acacha-scool/curriculum
     }
 }
