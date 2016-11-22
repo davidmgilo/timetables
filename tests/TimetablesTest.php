@@ -4,7 +4,7 @@
 /**
  * Class MisTestos
  */
-class MisTestosTest extends PHPUnit_Framework_TestCase
+class TimetablesTest extends PHPUnit_Framework_TestCase
 {
     /**
      * Test to know if there are shifts
