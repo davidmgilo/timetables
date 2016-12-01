@@ -1,7 +1,13 @@
 <?php
 
+namespace Scool\Timetables\Database\Seeds;
+
 use Illuminate\Database\Seeder;
 
+/**
+ * Class DatabaseSeeder
+ * @package Scool\Timetables\Database\Seeds
+ */
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -12,6 +18,6 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // $this->call(UsersTableSeeder::class);
-        //Seeders on directory src/Database/Seeds -> see acacha-scool/curriculum
+
     }
 }
