@@ -23,6 +23,9 @@ class TimetablesServiceProvider extends ServiceProvider
 
     public function boot()
     {
+        $this->loadMigrations();
+        $this->publishFactories();
+        $this->publishConfig();
         $this->publishTests();
     }
 
@@ -34,4 +37,34 @@ class TimetablesServiceProvider extends ServiceProvider
         );
     }
 
+    /**
+     * Load migrations.
+     */
+    private function loadMigrations()
+    {
+        $this->loadMigrationsFrom(SCOOL_TIMETABLES_PATH . '/database/migrations');
+    }
+    /**
+     * Publish factories.
+     */
+    private function publishFactories()
+    {
+        $this->publishes(
+            ScoolTimetables::factories(),"scool_timetables"
+            //TODO -> paths in a class
+        );
+    }
+
+
+    /**
+     * Publish config.
+     */
+    private function publishConfig() {
+        $this->publishes(
+            ScoolTimetables::configs(),"scool_timetables"
+        );
+        $this->mergeConfigFrom(
+            SCOOL_TIMETABLES_PATH . '/config/timetables.php', 'scool_timetables'
+        );
+    }
 }
