@@ -20,4 +20,12 @@ class TimetablesTest extends PHPUnit_Framework_TestCase
         $this->assertTrue(true);
     }
 
+//if (Schema::hasTable('users')) {
+//    //
+//}
+//
+//if (Schema::hasColumn('users', 'email')) {
+//    //
+//}
+
 }

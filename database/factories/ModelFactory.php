@@ -12,6 +12,7 @@
 */
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
+//TODO ????
 $factory->define(App\User::class, function (Faker\Generator $faker) {
     static $password;
 
