@@ -19,10 +19,13 @@ class TimetablesServiceProvider extends ServiceProvider
             define('SCOOL_TIMETABLES_PATH',realpath(__DIR__.'/../../'));
         }
 
+        $this->app->bind(\Scool\Timetables\Repositories\AttendanceRepository::class, \Scool\Timetables\Repositories\AttendanceRepositoryEloquent::class);
+
     }
 
     public function boot()
     {
+        $this->defineRoutes();
 //        $this->loadMigrations();
 //        $this->publishFactories();
 //        $this->publishConfig();
@@ -66,5 +69,18 @@ class TimetablesServiceProvider extends ServiceProvider
         $this->mergeConfigFrom(
             SCOOL_TIMETABLES_PATH . '/config/timetables.php', 'scool_timetables'
         );
+    }
+
+    /**
+     * Define the Timetables routes.
+     */
+    protected function defineRoutes()
+    {
+        if (!$this->app->routesAreCached()) {
+            $router = app('router');
+            $router->group(['namespace' => 'Scool\Timetables\Http\Controllers'], function () {
+                require __DIR__.'/../Http/routes.php';
+            });
+        }
     }
 }
