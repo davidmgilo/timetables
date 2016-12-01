@@ -3,8 +3,16 @@
 namespace Scool\Timetables\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Prettus\Repository\Contracts\Transformable;
+use Prettus\Repository\Traits\TransformableTrait;
 
-class Attendance extends Model
+/**
+ * Class Attendance
+ * @package Scool\Timetables\Models
+ */
+class Attendance extends Model implements Transformable
 {
-    //fillable
+    use TransformableTrait;
+
+    protected $fillable = [];
 }
