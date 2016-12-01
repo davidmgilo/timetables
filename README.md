@@ -3,8 +3,8 @@
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Software License][ico-license]](LICENSE.md)
 [![Build Status](https://travis-ci.org/davidmgilo/timetables.svg?branch=master)](https://travis-ci.org/davidmgilo/timetables)
-[![Coverage Status][ico-scrutinizer]][link-scrutinizer]
-[![Quality Score][ico-code-quality]][link-code-quality]
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/davidmgilo/timetables/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/davidmgilo/timetables/?branch=master)
+[![StyleCI](https://styleci.io/repos/73413104/shield?branch=master)](https://styleci.io/repos/73413104)
 [![Total Downloads][ico-downloads]][link-downloads]
 
 
