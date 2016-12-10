@@ -48,6 +48,11 @@ Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recen
 ``` bash
 $ composer test
 ```
+## See more
+
+On the presentation made via reveal.js:
+
+[Presentation](https://davidmgilo.github.io/timetables-presentation/#/)
 
 ## Contributing
 
