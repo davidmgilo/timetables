@@ -27,5 +27,4 @@ class TimetablesTest extends PHPUnit_Framework_TestCase
 //if (Schema::hasColumn('users', 'email')) {
 //    //
 //}
-
 }

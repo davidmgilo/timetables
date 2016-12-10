@@ -1,15 +1,15 @@
 <?php
 
 Route::group([
-    'middleware' => 'web'], function() {
-    Route::group(['middleware' => 'auth'], function () {
-        Route::resource('attendances', 'AttendancesController');
+    'middleware' => 'web'], function () {
+        Route::group(['middleware' => 'auth'], function () {
+            Route::resource('attendances', 'AttendancesController');
+        });
     });
-});
 Route::group([
     'middleware' => 'api',
     'prefix' => 'api',
-], function() {
+], function () {
     //Route::group(['prefix' => 'v1','middleware' => 'auth:api'], function () {
     Route::group(['prefix' => 'v1'], function () {
         Route::resource('attendances', 'AttendancesController');

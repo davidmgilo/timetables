@@ -18,7 +18,7 @@ class CreateShiftsTable extends Migration
     {
         Schema::create('shifts', function (Blueprint $table) {
             $table->increments('id');
-            $table->enum('torn',['tarda','mati']);
+            $table->enum('torn', ['tarda','mati']);
             $table->string('name');
             $table->timestamps();
         });

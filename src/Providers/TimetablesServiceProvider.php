@@ -12,15 +12,13 @@ use Illuminate\Support\ServiceProvider;
  */
 class TimetablesServiceProvider extends ServiceProvider
 {
-
     public function register()
     {
-        if(!defined('SCOOL_TIMETABLES_PATH')){
-            define('SCOOL_TIMETABLES_PATH',realpath(__DIR__.'/../../'));
+        if (!defined('SCOOL_TIMETABLES_PATH')) {
+            define('SCOOL_TIMETABLES_PATH', realpath(__DIR__.'/../../'));
         }
 
         $this->app->bind(\Scool\Timetables\Repositories\AttendanceRepository::class, \Scool\Timetables\Repositories\AttendanceRepositoryEloquent::class);
-
     }
 
     public function boot()
@@ -53,7 +51,7 @@ class TimetablesServiceProvider extends ServiceProvider
     private function publishFactories()
     {
         $this->publishes(
-            ScoolTimetables::factories(),"scool_timetables"
+            ScoolTimetables::factories(), "scool_timetables"
             //TODO -> paths in a class
         );
     }
@@ -62,9 +60,10 @@ class TimetablesServiceProvider extends ServiceProvider
     /**
      * Publish config.
      */
-    private function publishConfig() {
+    private function publishConfig()
+    {
         $this->publishes(
-            ScoolTimetables::configs(),"scool_timetables"
+            ScoolTimetables::configs(), "scool_timetables"
         );
         $this->mergeConfigFrom(
             SCOOL_TIMETABLES_PATH . '/config/timetables.php', 'scool_timetables'
