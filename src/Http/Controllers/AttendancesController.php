@@ -2,7 +2,6 @@
 
 namespace Scool\Timetables\Http\Controllers;
 
-
 //use App\Http\Requests;
 use Prettus\Validator\Contracts\ValidatorInterface;
 use Prettus\Validator\Exceptions\ValidatorException;
@@ -10,7 +9,6 @@ use Scool\Timetables\Http\Requests\AttendanceCreateRequest;
 use Scool\Timetables\Http\Requests\AttendanceUpdateRequest;
 use Scool\Timetables\Repositories\AttendanceRepository;
 use Scool\Timetables\Validators\AttendanceValidator;
-
 
 class AttendancesController extends Controller
 {
@@ -43,7 +41,6 @@ class AttendancesController extends Controller
         $attendances = $this->repository->all();
 
         if (request()->wantsJson()) {
-
             return response()->json([
                 'data' => $attendances,
             ]);
@@ -63,9 +60,7 @@ class AttendancesController extends Controller
      */
     public function store(AttendanceCreateRequest $request)
     {
-
         try {
-
             $this->validator->with($request->all())->passesOrFail(ValidatorInterface::RULE_CREATE);
 
             $attendance = $this->repository->create($request->all());
@@ -76,7 +71,6 @@ class AttendancesController extends Controller
             ];
 
             if ($request->wantsJson()) {
-
                 return response()->json($response);
             }
 
@@ -106,7 +100,6 @@ class AttendancesController extends Controller
         $attendance = $this->repository->find($id);
 
         if (request()->wantsJson()) {
-
             return response()->json([
                 'data' => $attendance,
             ]);
@@ -125,7 +118,6 @@ class AttendancesController extends Controller
      */
     public function edit($id)
     {
-
         $attendance = $this->repository->find($id);
 
         return view('attendances.edit', compact('attendance'));
@@ -142,9 +134,7 @@ class AttendancesController extends Controller
      */
     public function update(AttendanceUpdateRequest $request, $id)
     {
-
         try {
-
             $this->validator->with($request->all())->passesOrFail(ValidatorInterface::RULE_UPDATE);
 
             $attendance = $this->repository->update($id, $request->all());
@@ -155,15 +145,12 @@ class AttendancesController extends Controller
             ];
 
             if ($request->wantsJson()) {
-
                 return response()->json($response);
             }
 
             return redirect()->back()->with('message', $response['message']);
         } catch (ValidatorException $e) {
-
             if ($request->wantsJson()) {
-
                 return response()->json([
                     'error'   => true,
                     'message' => $e->getMessageBag()
@@ -187,7 +174,6 @@ class AttendancesController extends Controller
         $deleted = $this->repository->delete($id);
 
         if (request()->wantsJson()) {
-
             return response()->json([
                 'message' => 'Attendance deleted.',
                 'deleted' => $deleted,

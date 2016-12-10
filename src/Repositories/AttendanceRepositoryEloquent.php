@@ -31,7 +31,6 @@ class AttendanceRepositoryEloquent extends BaseRepository implements AttendanceR
     */
     public function validator()
     {
-
         return AttendanceValidator::class;
     }
 
