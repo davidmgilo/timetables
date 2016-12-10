@@ -1,15 +1,14 @@
 # timetables
 
-[![Latest Version on Packagist][ico-version]][link-packagist]
+[![Latest Stable Version](https://poser.pugx.org/davidmgilo/timetables/v/stable)](https://packagist.org/packages/davidmgilo/timetables)
 [![Software License][ico-license]](LICENSE.md)
 [![Build Status](https://travis-ci.org/davidmgilo/timetables.svg?branch=master)](https://travis-ci.org/davidmgilo/timetables)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/davidmgilo/timetables/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/davidmgilo/timetables/?branch=master)
 [![StyleCI](https://styleci.io/repos/73413104/shield?branch=master)](https://styleci.io/repos/73413104)
-[![Total Downloads][ico-downloads]][link-downloads]
+[![Total Downloads](https://poser.pugx.org/davidmgilo/timetables/downloads)](https://packagist.org/packages/davidmgilo/timetables)
 
 
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what
-PSRs you support to avoid any confusion with users and contributors.
+All-year-long project.
 
 ## Install
 
