@@ -53,6 +53,10 @@ On the presentation made via reveal.js:
 
 [Presentation](https://davidmgilo.github.io/timetables-presentation/#/)
 
+On the documentation via sami:
+
+[Docs](https://davidmgilo.github.io/TimetablesDocs/)
+
 ## Contributing
 
 Please see [CONTRIBUTING](CONTRIBUTING.md) and [CONDUCT](CONDUCT.md) for details.
