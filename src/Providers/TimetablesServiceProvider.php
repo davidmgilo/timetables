@@ -24,7 +24,7 @@ class TimetablesServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->defineRoutes();
-//        $this->loadMigrations();
+        $this->loadMigrations();
 //        $this->publishFactories();
 //        $this->publishConfig();
         $this->publishTests();
