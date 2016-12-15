@@ -3,6 +3,7 @@
 namespace Scool\Timetables\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Scool\Timetables\ScoolTimetables;
 
 /**
  * Created by PhpStorm.
@@ -25,8 +26,8 @@ class TimetablesServiceProvider extends ServiceProvider
     {
         $this->defineRoutes();
         $this->loadMigrations();
-//        $this->publishFactories();
-//        $this->publishConfig();
+        $this->publishFactories();
+        $this->publishConfig();
         $this->publishTests();
     }
 
@@ -52,7 +53,6 @@ class TimetablesServiceProvider extends ServiceProvider
     {
         $this->publishes(
             ScoolTimetables::factories(), "scool_timetables"
-            //TODO -> paths in a class
         );
     }
 
