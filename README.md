@@ -31,6 +31,30 @@ And publish files with:
 php artisan vendor:publish --tag=scool_timetables
 ```
 
+## Database
+
+Use:
+
+```
+php artisan migrate:status
+```
+
+To see timetables migrations and run migrations with:
+
+```
+php artisan migrate
+```
+
+Factories for all models are installed in database/factories.
+
+To use Timetables Seeders modify file database/seeds/DatabaseSeeder:
+```
+public function run()
+{
+    $this->call(TimetablesSeeder::class);
+}
+```
+
 ## Usage
 
 ``` php
