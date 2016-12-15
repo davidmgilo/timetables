@@ -18,6 +18,19 @@ class CreateAttendancesTable extends Migration
     {
         Schema::create('attendances', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('user_id')->unsigned();
+            $table->integer('day_id')->unsigned();
+            $table->integer('timeslot_id')->unsigned();
+            $table->date('date');
+            $table->integer('studysubmodule_id')->unsigned();
+            $table->text('notes');
+            //todo userstamps???
+            $table->timestamps();
+        });
+
+        Schema::create('attendance_type', function (Blueprint $table) {
+            $table->increments('id');
+            $table->enum('name', ['Faltes', 'Faltes justificades',' Retards', 'Retards Justificats', 'Expulsions']);
             $table->timestamps();
         });
     }
@@ -30,5 +43,6 @@ class CreateAttendancesTable extends Migration
     public function down()
     {
         Schema::dropIfExists('attendances');
+        Schema::dropIfExists('attendance_type');
     }
 }
