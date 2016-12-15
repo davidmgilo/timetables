@@ -5,10 +5,10 @@ namespace Scool\Timetables\Database\Seeds;
 use Illuminate\Database\Seeder;
 
 /**
- * Class DatabaseSeeder
+ * Class TimetablesSeeder
  * @package Scool\Timetables\Database\Seeds
  */
-class DatabaseSeeder extends Seeder
+class TimetablesSeeder extends Seeder
 {
     /**
      * Run the database seeds.

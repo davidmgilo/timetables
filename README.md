@@ -15,7 +15,7 @@ All-year-long project.
 Via Composer in a laravel project
 
 ``` bash
-$ composer require scool/timetables
+$ composer require davidmgilo/timetables
 ```
 
 Add to file **config/app.php** the TimetablesServiceProvider:
