@@ -3,6 +3,7 @@
 namespace Scool\Timetables\Providers;
 
 use Acacha\Names\Providers\NamesServiceProvider;
+use Acacha\Stateful\Providers\StatefulServiceProvider;
 use Illuminate\Support\ServiceProvider;
 use Scool\Timetables\ScoolTimetables;
 
@@ -21,6 +22,7 @@ class TimetablesServiceProvider extends ServiceProvider
         }
 
         $this->registerNameServiceProvider();
+        $this->registerStatefulEloquentServiceProvider();
 
         $this->app->bind(\Scool\Timetables\Repositories\AttendanceRepository::class, \Scool\Timetables\Repositories\AttendanceRepositoryEloquent::class);
     }
@@ -89,5 +91,11 @@ class TimetablesServiceProvider extends ServiceProvider
                 require __DIR__.'/../Http/routes.php';
             });
         }
+    }
+
+    private function registerStatefulEloquentServiceProvider()
+    {
+        $this->app->register(StatefulServiceProvider::class);
+
     }
 }

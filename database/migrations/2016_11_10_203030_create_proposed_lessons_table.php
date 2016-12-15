@@ -16,6 +16,7 @@ class CreateProposedLessonsTable extends Migration
         Schema::create('proposed_lessons', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('location_id')->unsigned();
+            $table->string('state')->nullable();
             $table->timestamps();
         });
 

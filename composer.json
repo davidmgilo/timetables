@@ -6,7 +6,9 @@
         "fzaninotto/faker": "^1.6",
         "scool/foundation": "^0.1.0",
         "prettus/l5-repository": "^2.6",
-        "acacha/names": "dev-master"
+        "acacha/names": "dev-master",
+        "acacha/stateful-eloquent" : "dev-master",
+        "spatie/laravel-permission": "^1.5"
     },
     "license": "MIT",
     "authors": [
