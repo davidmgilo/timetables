@@ -23,6 +23,7 @@ class CreateAttendancesTable extends Migration
             $table->integer('timeslot_id')->unsigned();
             $table->date('date');
             $table->integer('studysubmodule_id')->unsigned();
+            $table->integer('type_id')->unsigned(); //TODO ?????
             $table->text('notes');
             //todo userstamps???
             $table->timestamps();
