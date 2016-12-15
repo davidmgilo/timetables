@@ -2,6 +2,7 @@
 
 namespace Scool\Timetables\Providers;
 
+use Acacha\Names\Providers\NamesServiceProvider;
 use Illuminate\Support\ServiceProvider;
 use Scool\Timetables\ScoolTimetables;
 
@@ -19,7 +20,14 @@ class TimetablesServiceProvider extends ServiceProvider
             define('SCOOL_TIMETABLES_PATH', realpath(__DIR__.'/../../'));
         }
 
+        $this->registerNameServiceProvider();
+
         $this->app->bind(\Scool\Timetables\Repositories\AttendanceRepository::class, \Scool\Timetables\Repositories\AttendanceRepositoryEloquent::class);
+    }
+
+    protected function registerNameServiceProvider()
+    {
+        $this->app->register(NamesServiceProvider::class);
     }
 
     public function boot()
