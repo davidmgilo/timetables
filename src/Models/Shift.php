@@ -2,6 +2,7 @@
 
 namespace Scool\Timetables\Models;
 
+use Acacha\Names\Traits\Nameable;
 use Illuminate\Database\Eloquent\Model;
 
 /**
@@ -10,6 +11,8 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Shift extends Model
 {
+    use Nameable;
+
     protected $fillable = [
         'torn', 'name',
     ];
