@@ -24,6 +24,20 @@ class CreateProposedLessonsTable extends Migration
 
         //Ha de tindre id, location_id, timestamps, userstamps, desideratum_id,
         //relacions amb User i amb Studysubmodule
+
+        Schema::create('proposed_lesson_user', function (Blueprint $table) {
+            $table->integer('proposed_lesson_id')->unsigned();
+            $table->integer('user_id')->unsigned();
+            $table->timestamps();
+            $table->unique(['proposed_lesson_id', 'user_id']);
+        });
+
+        Schema::create('proposed_lesson_studysubmodule', function (Blueprint $table) {
+            $table->integer('proposed_lesson_id')->unsigned();
+            $table->integer('studysubmodule_id')->unsigned();
+            $table->timestamps();
+            $table->unique(['proposed_lesson_id', 'studysubmodule_id']);
+        });
     }
 
     /**
@@ -33,6 +47,8 @@ class CreateProposedLessonsTable extends Migration
      */
     public function down()
     {
+        Schema::dropIfExists('proposed_lesson_studysubmodule');
+        Schema::dropIfExists('proposed_lesson_user');
         Schema::dropIfExists('proposed_lessons');
     }
 }
