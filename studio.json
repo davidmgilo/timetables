@@ -1,6 +1,6 @@
 {
     "version": 2,
     "paths": [
-        "/home/alumne/Code/scool/stateful-eloquent"
+        "../stateful-eloquent"
     ]
 }

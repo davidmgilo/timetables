@@ -45,7 +45,7 @@
             "version": "dev-master",
             "dist": {
                 "type": "path",
-                "url": "/home/alumne/Code/scool/stateful-eloquent",
+                "url": "../stateful-eloquent",
                 "reference": "8b973aa58f86932c4dab5f5d5f3046f10a862b1b",
                 "shasum": null
             },
