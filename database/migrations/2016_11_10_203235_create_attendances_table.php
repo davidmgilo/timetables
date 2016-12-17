@@ -23,9 +23,9 @@ class CreateAttendancesTable extends Migration
             $table->integer('timeslot_id')->unsigned();
             $table->date('date');
             $table->integer('studysubmodule_id')->unsigned();
-            $table->integer('type_id')->unsigned(); //TODO ?????
+            $table->integer('type_id')->unsigned(); //TODO ? 1 a N aixi?
             $table->text('notes');
-            //todo userstamps???
+            //todo userstamps??? https://github.com/WildSideUK/Laravel-Userstamps?? https://github.com/acacha/Laravel-Userstamps
             $table->timestamps();
         });
 
