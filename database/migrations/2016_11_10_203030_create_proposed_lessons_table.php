@@ -17,6 +17,8 @@ class CreateProposedLessonsTable extends Migration
             $table->increments('id');
             $table->integer('location_id')->unsigned();
             $table->string('state')->nullable();
+            $table->integer('desideratum_id')->unsigned();
+            //todo userstamps??? https://github.com/WildSideUK/Laravel-Userstamps?? https://github.com/acacha/Laravel-Userstamps
             $table->timestamps();
         });
 
