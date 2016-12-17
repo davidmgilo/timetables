@@ -14,5 +14,7 @@ class Attendance extends Model implements Transformable
 {
     use TransformableTrait;
 
-    protected $fillable = [];
+    protected $fillable = [
+        'user_id', 'day_id', 'timeslot_id', 'date', 'studysubmodule_id', 'type_id', 'notes',
+    ];
 }
