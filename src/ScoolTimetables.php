@@ -16,6 +16,8 @@ class ScoolTimetables
         return [
             SCOOL_TIMETABLES_PATH . '/database/factories/ShiftFactory.php' =>
                 database_path('/factories/ShiftFactory.php'),
+            SCOOL_TIMETABLES_PATH . '/database/factories/AttendanceFactory.php' =>
+                database_path('/factories/AttendanceFactory.php'),
         ];
     }
 
