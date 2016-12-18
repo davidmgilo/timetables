@@ -3,6 +3,7 @@
 namespace Scool\Timetables\Database\Seeds;
 
 use Illuminate\Database\Seeder;
+use Scool\Timetables\Models\Attendance;
 
 /**
  * Class AttendancesSeeder
@@ -17,6 +18,6 @@ class AttendancesSeeder extends Seeder
      */
     public function run()
     {
-        //
+        factory(Attendance::class, 30)->create();
     }
 }
