@@ -24,7 +24,7 @@ class AttendanceCreateRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            //TODO
         ];
     }
 }

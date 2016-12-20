@@ -36,7 +36,7 @@ class CreateDesirataTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('desiratum_department');
+        Schema::dropIfExists('desideratum_department');
         Schema::dropIfExists('desirata');
     }
 }
