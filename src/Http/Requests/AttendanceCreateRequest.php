@@ -24,6 +24,8 @@ class AttendanceCreateRequest extends FormRequest
     public function rules()
     {
         return [
+            'notes' => 'required',
+            'user_id' => 'required',
             //TODO
         ];
     }
