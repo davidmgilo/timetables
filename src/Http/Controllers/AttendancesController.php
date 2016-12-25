@@ -137,7 +137,7 @@ class AttendancesController extends Controller
         try {
             $this->validator->with($request->all())->passesOrFail(ValidatorInterface::RULE_UPDATE);
 
-            $attendance = $this->repository->update($id, $request->all());
+            $attendance = $this->repository->update( $request->all(),$id);
 
             $response = [
                 'message' => 'Attendance updated.',

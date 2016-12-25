@@ -24,7 +24,8 @@ class AttendanceUpdateRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'notes' => 'required',
+            'user_id' => 'required',
         ];
     }
 }
