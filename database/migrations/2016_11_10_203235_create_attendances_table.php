@@ -31,7 +31,7 @@ class CreateAttendancesTable extends Migration
 
         Schema::create('attendance_type', function (Blueprint $table) {
             $table->increments('id');
-            $table->enum('name', ['Faltes', 'Faltes justificades',' Retards', 'Retards Justificats', 'Expulsions']);
+            $table->enum('name', ['Faltes', 'Faltes justificades','Retards', 'Retards Justificats', 'Expulsions']);
             $table->timestamps();
         });
     }
