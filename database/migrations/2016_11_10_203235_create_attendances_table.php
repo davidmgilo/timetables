@@ -29,7 +29,7 @@ class CreateAttendancesTable extends Migration
             $table->timestamps();
         });
 
-        Schema::create('attendance_type', function (Blueprint $table) {
+        Schema::create('attendance_types', function (Blueprint $table) {
             $table->increments('id');
             $table->enum('name', ['Faltes', 'Faltes justificades','Retards', 'Retards Justificats', 'Expulsions']);
             $table->timestamps();
@@ -44,6 +44,6 @@ class CreateAttendancesTable extends Migration
     public function down()
     {
         Schema::dropIfExists('attendances');
-        Schema::dropIfExists('attendance_type');
+        Schema::dropIfExists('attendance_types');
     }
 }

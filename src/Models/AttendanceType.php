@@ -4,11 +4,13 @@
 namespace Scool\Timetables\Models;
 
 
+use Illuminate\Database\Eloquent\Model;
+
 /**
  * Class AttendanceType
  * @package Scool\Timetables\Models
  */
-class AttendanceType
+class AttendanceType extends Model
 {
     const F_TYPE = "Faltes";
 
