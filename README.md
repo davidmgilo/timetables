@@ -51,6 +51,7 @@ To use Timetables Seeders modify file database/seeds/DatabaseSeeder:
 ```
 public function run()
 {
+    ...
     $this->call(TimetablesSeeder::class);
 }
 ```
