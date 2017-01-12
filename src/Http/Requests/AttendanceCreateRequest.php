@@ -13,6 +13,7 @@ class AttendanceCreateRequest extends FormRequest
      */
     public function authorize()
     {
+        //recordar que s'ha de canviar cada cop
         return true;
     }
 
