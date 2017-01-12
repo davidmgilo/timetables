@@ -6,6 +6,7 @@ use Acacha\Names\Providers\NamesServiceProvider;
 use Acacha\Stateful\Providers\StatefulServiceProvider;
 use Illuminate\Support\ServiceProvider;
 use Scool\Timetables\ScoolTimetables;
+use Spatie\Permission\PermissionServiceProvider;
 
 /**
  * Created by PhpStorm.
@@ -22,6 +23,7 @@ class TimetablesServiceProvider extends ServiceProvider
         }
 
         $this->registerNameServiceProvider();
+        $this->registerPermissionServiceProvider();
         $this->registerStatefulEloquentServiceProvider();
 
         $this->app->bind(\Scool\Timetables\Repositories\AttendanceRepository::class, \Scool\Timetables\Repositories\AttendanceRepositoryEloquent::class);
@@ -31,6 +33,11 @@ class TimetablesServiceProvider extends ServiceProvider
     protected function registerNameServiceProvider()
     {
         $this->app->register(NamesServiceProvider::class);
+    }
+
+    protected function registerPermissionServiceProvider()
+    {
+        $this->app->register(PermissionServiceProvider::class);
     }
 
     public function boot()

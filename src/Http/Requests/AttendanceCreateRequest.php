@@ -14,7 +14,7 @@ class AttendanceCreateRequest extends FormRequest
     public function authorize()
     {
         //recordar que s'ha de canviar cada cop
-//        if(Auth::user()->can('create-attendances')) return true;
+//        if(Auth::user()->can('create attendances')) return true;
 
         return true;
     }

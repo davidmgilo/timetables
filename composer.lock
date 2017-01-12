@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "94fd831c83ebcd68a4e51a8044b199b0",
-    "content-hash": "ec5224cc207c60b6d66c1151e7a198b8",
+    "hash": "f3137960c833f4bb091e9539103710e9",
+    "content-hash": "f6ef3a23e0ae5b2cff41e0a9001b8052",
     "packages": [
         {
             "name": "acacha/l5-repository",
