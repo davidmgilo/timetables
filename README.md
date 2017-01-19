@@ -56,6 +56,9 @@ public function run()
 }
 ```
 
+It depends from spatie/laravel-permission and it must have the migrations from it published.
+
+
 ## Usage
 
 ``` php
