@@ -18,6 +18,7 @@ class CreateDesirataTable extends Migration
             $table->string('name');
             $table->string('state');
             //todo userstamps??? https://github.com/WildSideUK/Laravel-Userstamps?? https://github.com/acacha/Laravel-Userstamps
+            //Ho farem més tard
             $table->timestamps();
         });
 
