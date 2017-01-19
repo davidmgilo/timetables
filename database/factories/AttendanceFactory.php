@@ -8,7 +8,7 @@ $factory->define(Scool\Timetables\Models\Attendance::class, function (Faker\Gene
         'timeslot_id' => $faker->randomDigitNotNull ,
         'date' => $faker->dateTimeThisMonth,
         'studysubmodule_id' => $faker->randomDigitNotNull ,
-        'type_id' => $faker->randomDigitNotNull ,
+        'type_id' => $faker->randomElement($array = array ('1','2','3','4','5')) ,
         'notes' => $faker->sentence,
     ];
 });
