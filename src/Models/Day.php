@@ -12,7 +12,7 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Day extends Model
 {
-    use Nameable;
+   // use Nameable;
 
     /**
      * The attributes that are mass assignable.
