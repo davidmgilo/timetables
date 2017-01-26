@@ -53,10 +53,17 @@ public function run()
 {
     ...
     $this->call(TimetablesSeeder::class);
+    $this->call(AttendancePermissionSeeder::class);
 }
 ```
 
 It depends from spatie/laravel-permission and it must have the migrations from it published.
+
+You can publish them after a **composer require spatie/laravel-permission** and installing the provider with the order:
+
+```bash
+php artisan vendor:publish --provider="Spatie\Permission\PermissionServiceProvider" --tag="migrations"
+```
 
 
 ## Usage
