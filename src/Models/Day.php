@@ -2,6 +2,7 @@
 
 namespace Scool\Timetables\Models;
 
+use Acacha\Names\Traits\Nameable;
 use Illuminate\Database\Eloquent\Model;
 
 /**
@@ -11,6 +12,8 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Day extends Model
 {
+    use Nameable;
+
     /**
      * The attributes that are mass assignable.
      *
