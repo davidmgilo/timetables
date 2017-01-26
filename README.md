@@ -57,7 +57,7 @@ public function run()
 }
 ```
 
-It depends from spatie/laravel-permission and it must have the migrations from it published.
+It depends from [spatie/laravel-permission](https://github.com/spatie/laravel-permission) and it must have the migrations from it published.
 
 You can publish them after a **composer require spatie/laravel-permission** and installing the provider with the order:
 
