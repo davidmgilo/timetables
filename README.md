@@ -25,6 +25,18 @@ Add to file **config/app.php** the TimetablesServiceProvider:
 */
 Scool\Timetables\Providers\TimetablesServiceProviders::class,
 ```
+You'll need other packages:
+
+spatie/menu
+laravel/passport
+
+
+Add other ServicePoviders:
+
+```php
+Spatie\Menu\Laravel\MenuServiceProvider::class,
+Laravel\Passport\PassportServiceProvider::class,
+```
 
 And publish files with:
 ```bash
