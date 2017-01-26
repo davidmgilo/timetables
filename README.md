@@ -57,9 +57,6 @@ public function run()
 }
 ```
 
-It depends from [spatie/laravel-permission](https://github.com/spatie/laravel-permission) and it must have the migrations from it published.
-
-Please, follow the install instructions.
 
 
 ## Usage
