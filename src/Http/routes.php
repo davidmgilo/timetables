@@ -7,7 +7,7 @@ Route::group([
         });
     });
 Route::group([
-    'middleware' => 'api',
+    'middleware' => 'auth:api',
     'prefix' => 'api',
 ], function () {
     //Route::group(['prefix' => 'v1','middleware' => 'auth:api'], function () {
