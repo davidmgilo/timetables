@@ -1,6 +1,6 @@
 <?php
 
-namespace ;
+namespace Scool\Timetables\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
@@ -13,7 +13,7 @@ class DesiratumCreateRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
