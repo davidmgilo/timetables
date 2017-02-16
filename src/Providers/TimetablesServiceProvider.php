@@ -45,6 +45,7 @@ class TimetablesServiceProvider extends ServiceProvider
     {
         $this->defineRoutes();
         $this->loadMigrations();
+        $this->loadViews();
         $this->publishFactories();
         $this->publishConfig();
         $this->publishTests();
@@ -106,5 +107,13 @@ class TimetablesServiceProvider extends ServiceProvider
     {
         $this->app->register(StatefulServiceProvider::class);
 
+    }
+
+    /**
+     * Load package views.
+     */
+    private function loadViews()
+    {
+        $this->loadViewsFrom(SCOOL_TIMETABLES_PATH . '/resources/views', 'timetables');
     }
 }

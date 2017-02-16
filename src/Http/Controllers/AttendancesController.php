@@ -46,7 +46,7 @@ class AttendancesController extends Controller
             ]);
         }
 
-        return view('attendances.index', compact('attendances'));
+        return view('timetables::attendances.index', compact('attendances'));
     }
 
     //TODO : create
@@ -105,7 +105,7 @@ class AttendancesController extends Controller
             ]);
         }
 
-        return view('attendances.show', compact('attendance'));
+        return view('timetables::attendances.show', compact('attendance'));
     }
 
 
@@ -120,7 +120,7 @@ class AttendancesController extends Controller
     {
         $attendance = $this->repository->find($id);
 
-        return view('attendances.edit', compact('attendance'));
+        return view('timetables::attendances.edit', compact('attendance'));
     }
 
 
