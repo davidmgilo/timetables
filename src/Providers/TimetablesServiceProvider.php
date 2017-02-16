@@ -49,6 +49,7 @@ class TimetablesServiceProvider extends ServiceProvider
         $this->publishFactories();
         $this->publishConfig();
         $this->publishTests();
+        $this->publishViews();
     }
 
     private function publishTests()
@@ -115,5 +116,13 @@ class TimetablesServiceProvider extends ServiceProvider
     private function loadViews()
     {
         $this->loadViewsFrom(SCOOL_TIMETABLES_PATH . '/resources/views', 'timetables');
+    }
+
+    private function publishViews()
+    {
+        $this->publishes(
+            [SCOOL_TIMETABLES_PATH.'/resources/views/attendances/index.blade.php' =>'resources/views/vendor/timetables/attendances/index.blade.php'],
+            'scool_timetables'
+        );
     }
 }
