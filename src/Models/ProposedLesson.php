@@ -4,6 +4,7 @@ namespace Scool\Timetables\Models;
 
 use Acacha\Stateful\Traits\StatefulTrait;
 use Illuminate\Database\Eloquent\Model;
+use Scool\Foundation\User;
 
 class ProposedLesson extends Model
 {
@@ -19,7 +20,7 @@ class ProposedLesson extends Model
      */
     public function users()
     {
-        return $this->belongsToMany(App\User::class);
+        return $this->belongsToMany(User::class);
     }
 
     //TODO falta la relació completa, falta la classe Studysubmodule. Traits
