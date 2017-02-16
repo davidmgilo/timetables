@@ -3,6 +3,7 @@
 namespace Scool\Timetables\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Support\Facades\Auth;
 
 class AttendanceCreateRequest extends FormRequest
 {
@@ -14,9 +15,9 @@ class AttendanceCreateRequest extends FormRequest
     public function authorize()
     {
         //recordar que s'ha de canviar cada cop
-//        if(Auth::user()->can('create attendances')) return true;
+        if(Auth::user()->can('add attendances')) return true;
 
-        return true;
+        return false;
     }
 
     /**
