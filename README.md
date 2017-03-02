@@ -31,7 +31,7 @@ spatie/menu
 laravel/passport
 
 
-Add other ServicePoviders:
+Add other ServiceProviders:
 
 ```php
 Spatie\Menu\Laravel\MenuServiceProvider::class,
