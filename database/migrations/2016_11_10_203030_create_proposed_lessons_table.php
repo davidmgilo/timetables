@@ -37,7 +37,7 @@ class CreateProposedLessonsTable extends Migration
             $table->integer('proposed_lesson_id')->unsigned();
             $table->integer('studysubmodule_id')->unsigned();
             $table->timestamps();
-            $table->unique(['proposed_lesson_id', 'studysubmodule_id']);
+//            $table->unique(['proposed_lesson_id', 'studysubmodule_id']);
         });
     }
 
