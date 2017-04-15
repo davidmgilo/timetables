@@ -3,7 +3,7 @@
 Route::group([
     'middleware' => 'web'], function () {
         Route::group(['middleware' => 'auth'], function () {
-            Route::group(['middleware' => 'can:manage attendances'], function () {
+            Route::group(['middleware' => 'can:browse attendances'], function () {
                 Route::resource('attendances', 'AttendancesController');
             });
         });
