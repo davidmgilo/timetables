@@ -5,24 +5,24 @@ namespace Scool\Timetables\Models;
 use Acacha\Names\Traits\Nameable;
 use Illuminate\Database\Eloquent\Model;
 
+
 /**
- * Class Shift
+ * Class Timeslot
  * @package Scool\Timetables\Models
  */
-class Shift extends Model
+class Timeslot extends Model
 {
     use Nameable;
 
     protected $fillable = [
-        'torn', 'name',
+         'name', 'init_hour', 'final_hour'
     ];
 
-    //TODO falta la relació completa Traits
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
-    public function timeslots()
+    public function shifts()
     {
-        return $this->belongsToMany(Timeslot::class);
+        return $this->belongsToMany(Shift::class);
     }
 }

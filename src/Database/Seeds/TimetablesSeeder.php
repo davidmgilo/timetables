@@ -17,7 +17,9 @@ class TimetablesSeeder extends Seeder
      */
     public function run()
     {
-        $this->call(AttendancesSeeder::class);
         $this->call(DaysSeeder::class);
+        $this->call(TimeslotsSeeder::class);
+        $this->call(ShiftsSeeder::class);
+        $this->call(AttendancesSeeder::class);
     }
 }
