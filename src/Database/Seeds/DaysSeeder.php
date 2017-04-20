@@ -18,7 +18,6 @@ class DaysSeeder extends Seeder
      */
     public function run()
     {
-        //TODO Just trying - read wikia to do it right
         $this->createDay('Dilluns',1,true);
         $this->createDay('Dimarts',2,true);
         $this->createDay('Dimecres',3,true);
