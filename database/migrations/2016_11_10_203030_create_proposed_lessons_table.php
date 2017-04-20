@@ -25,6 +25,7 @@ class CreateProposedLessonsTable extends Migration
 
         //Ha de tindre id, location_id, timestamps, userstamps, desideratum_id,
         //relacions amb User i amb Studysubmodule
+        //TODO millor taula lessons amb estat - desiderata sera un estat de la taula lesson (sense name ni relació amb departaments).
 
         Schema::create('proposed_lesson_user', function (Blueprint $table) {
             $table->integer('proposed_lesson_id')->unsigned();
