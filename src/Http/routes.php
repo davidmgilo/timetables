@@ -17,3 +17,6 @@ Route::group([
         Route::resource('attendances', 'AttendancesController');
     });
 });
+
+Route::resource('lessons', 'LessonsController');
+        //:end-routes:
