@@ -16,9 +16,30 @@ class CreateLessonsTable extends Migration
 	{
 		Schema::create('lessons', function(Blueprint $table) {
             $table->increments('id');
-
+            $table->integer('location_id')->unsigned()->nullable();  // One to many
+            $table->integer('day_id')->unsigned()->nullable();       // One to many
+            $table->integer('timeslot_id')->unsigned()->nullable();  // One to many
+            $table->integer('classroom_id')->unsigned()->nullable(); // One to many
+            $table->string('state')->nullable();
             $table->timestamps();
+            $table->foreign('location_id')->references('id')->on('locations');
+            $table->foreign('day_id')->references('id')->on('days');
+            $table->foreign('timeslot_id')->references('id')->on('timeslots');
+            $table->foreign('classroom_id')->references('id')->on('classrooms');
 		});
+
+        Schema::create('lesson_user', function (Blueprint $table) {
+            $table->integer('lesson_id')->unsigned();
+            $table->integer('user_id')->unsigned();
+            $table->timestamps();
+            $table->unique(['lesson_id', 'user_id']);
+        });
+        Schema::create('lesson_submodule', function (Blueprint $table) {
+            $table->integer('lesson_id')->unsigned();
+            $table->integer('submodule_id')->unsigned();
+            $table->timestamps();
+            $table->unique(['lesson_id', 'submodule_id']);
+        });
 	}
 
 	/**
@@ -28,7 +49,9 @@ class CreateLessonsTable extends Migration
 	 */
 	public function down()
 	{
-		Schema::drop('lessons');
+        Schema::dropIfExists('lesson_user');
+        Schema::dropIfExists('lesson_submodule');
+        Schema::dropIfExists('lessons');
 	}
 
 }
