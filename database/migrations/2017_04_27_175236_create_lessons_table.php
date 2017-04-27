@@ -4,6 +4,10 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
+/**
+ * Class CreateLessonsTable.
+ * Migration for Lesson model.
+ */
 class CreateLessonsTable extends Migration
 {
 
@@ -19,7 +23,7 @@ class CreateLessonsTable extends Migration
             $table->integer('location_id')->unsigned()->nullable();  // One to many
             $table->integer('day_id')->unsigned()->nullable();       // One to many
             $table->integer('timeslot_id')->unsigned()->nullable();  // One to many
-            $table->integer('classroom_id')->unsigned()->nullable(); // One to many
+            $table->integer('classroom_id')->unsigned()->nullable(); // One to many On Classrom Model hasMany, on Lesson model belongsTo
             $table->string('state')->nullable();
             $table->timestamps();
             $table->foreign('location_id')->references('id')->on('locations');
