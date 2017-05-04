@@ -65,4 +65,54 @@ class Lesson extends Model implements Transformable, Stateful
     {
         return $this->belongsToMany(\Submodule::class); //TODO
     }
+
+    protected $states = [
+//        'draft' => ['inital' => true],
+//        'processing',
+//        'errored',
+//        'active',
+//        'closed' => ['final' => true]
+    ];
+
+    protected $transitions = [
+//        'process' => [
+//            'from' => ['draft', 'errored'],
+//            'to' => 'processing'
+//        ],
+//        'activate' => [
+//            'from' => 'processing',
+//            'to' => 'active'
+//        ],
+//        'fail' => [
+//            'from' => 'processing',
+//            'to' => 'errored'
+//        ],
+//        'close' => [
+//            'from' => 'active',
+//            'to' => 'close'
+//        ]
+    ];
+
+//    /**
+//     * @return bool
+//     */
+//    protected function validateProcess()
+//    {
+//        $validate = true;
+//        if (!$validate) {
+//            $this->addValidateProcessMessage();
+//        }
+//
+//        return $validate;
+//    }
+//
+//    /**
+//     * @return bool
+//     */
+//    protected function validateActivate()
+//    {
+//        //dd("validateActivate");
+//        return true;
+//    }
+
 }

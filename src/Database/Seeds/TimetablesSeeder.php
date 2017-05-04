@@ -18,8 +18,10 @@ class TimetablesSeeder extends Seeder
     public function run()
     {
         $this->call(DaysSeeder::class);
+        $this->call(ClassroomsSeeder::class);
+        $this->call(UsersSeeder::class);
         $this->call(TimeslotsSeeder::class);
         $this->call(ShiftsSeeder::class);
-        $this->call(AttendancesSeeder::class);
+//        $this->call(AttendancesSeeder::class);
     }
 }
