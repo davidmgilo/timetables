@@ -13,6 +13,8 @@ class LessonUpdateRequest extends FormRequest
      */
     public function authorize()
     {
+//        if(Auth::user()->can('edit attendances')) return true;
+
         return false;
     }
 
@@ -24,7 +26,8 @@ class LessonUpdateRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            //'notes' => 'required',
+//            'user_id' => 'required',
         ];
     }
 }

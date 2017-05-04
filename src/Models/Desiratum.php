@@ -10,19 +10,19 @@ use Prettus\Repository\Traits\TransformableTrait;
 
 class Desiratum extends Model implements Transformable
 {
-    use TransformableTrait, Nameable, StatefulTrait;
-
-    protected $fillable = [
-        'torn', 'name',
-    ];
-
-    //TODO falta la relació completa, falta la classe Timeslot. Traits
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
-     */
-    public function timeslots()
-    {
-        return $this->belongsToMany(App\Timeslot::class);
-    }
+//    use TransformableTrait, Nameable, StatefulTrait;
+//
+//    protected $fillable = [
+//        'torn', 'name',
+//    ];
+//
+//    //TODO falta la relació completa, falta la classe Timeslot. Traits
+//    /**
+//     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+//     */
+//    public function timeslots()
+//    {
+//        return $this->belongsToMany(App\Timeslot::class);
+//    }
 
 }

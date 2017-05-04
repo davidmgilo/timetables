@@ -13,6 +13,8 @@ class LessonCreateRequest extends FormRequest
      */
     public function authorize()
     {
+        //recordar que s'ha de canviar cada cop
+//        if(Auth::user()->can('add attendances')) return true;
         return false;
     }
 
@@ -24,7 +26,9 @@ class LessonCreateRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            //          'notes' => 'required',
+//            'user_id' => 'required',
+            //TODO
         ];
     }
 }

@@ -19,12 +19,12 @@ class AttendancesSeeder extends Seeder
      */
     public function run()
     {
-        $this->createAttendancesType(AttendanceType::R_TYPE);
-        $this->createAttendancesType(AttendanceType::RJ_TYPE);
-        $this->createAttendancesType(AttendanceType::F_TYPE);
-        $this->createAttendancesType(AttendanceType::FJ_TYPE);
-        $this->createAttendancesType(AttendanceType::E_TYPE);
-        $this->createAttendances();
+//        $this->createAttendancesType(AttendanceType::R_TYPE);
+//        $this->createAttendancesType(AttendanceType::RJ_TYPE);
+//        $this->createAttendancesType(AttendanceType::F_TYPE);
+//        $this->createAttendancesType(AttendanceType::FJ_TYPE);
+//        $this->createAttendancesType(AttendanceType::E_TYPE);
+//        $this->createAttendances();
     }
 
     public function createAttendances()

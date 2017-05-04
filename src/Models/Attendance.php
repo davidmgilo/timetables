@@ -12,9 +12,9 @@ use Prettus\Repository\Traits\TransformableTrait;
  */
 class Attendance extends Model implements Transformable
 {
-    use TransformableTrait;
-
-    protected $fillable = [
-        'user_id', 'day_id', 'timeslot_id', 'date', 'studysubmodule_id', 'type_id', 'notes',
-    ];
+//    use TransformableTrait;
+//
+//    protected $fillable = [
+//        'user_id', 'day_id', 'timeslot_id', 'date', 'studysubmodule_id', 'type_id', 'notes',
+//    ];
 }

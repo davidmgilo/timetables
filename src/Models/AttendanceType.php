@@ -12,15 +12,15 @@ use Illuminate\Database\Eloquent\Model;
  */
 class AttendanceType extends Model
 {
-    const F_TYPE = "Faltes";
-
-    const FJ_TYPE = "Faltes justificades";
-
-    const R_TYPE = "Retards";
-
-    const RJ_TYPE = "Retards Justificats";
-
-    const E_TYPE = "Expulsions";
-
-    protected $fillable = ['name'];
+//    const F_TYPE = "Faltes";
+//
+//    const FJ_TYPE = "Faltes justificades";
+//
+//    const R_TYPE = "Retards";
+//
+//    const RJ_TYPE = "Retards Justificats";
+//
+//    const E_TYPE = "Expulsions";
+//
+//    protected $fillable = ['name'];
 }
