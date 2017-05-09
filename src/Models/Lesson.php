@@ -23,7 +23,7 @@ class Lesson extends Model implements Transformable, Stateful
      */
     public function locations()
     {
-        return $this->belongsTo(\Scool\Timetables\Models\Location::class); //TODO
+        return $this->belongsTo(\Scool\Timetables\Models\Location::class);
     }
 
     /**
