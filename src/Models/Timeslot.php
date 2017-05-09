@@ -23,6 +23,6 @@ class Timeslot extends Model
      */
     public function shifts()
     {
-        return $this->belongsToMany(Shift::class);
+        return $this->belongsToMany(Shift::class)->withTimestamps();
     }
 }
