@@ -19,12 +19,9 @@ class ClassroomsSeeder extends Seeder
      */
     public function run()
     {
-        $this->createClassroom('20.2');
-        $this->createClassroom('20.3');
-        $this->createClassroom('20.4');
-        $this->createClassroom('21');
-        $this->createClassroom('22');
-        $this->createClassroom('23');
+        $this->createClassroom('2DAM');
+        $this->createClassroom('2ASIX');
+        $this->createClassroom('1ASIX/DAM');
 
     }
 
