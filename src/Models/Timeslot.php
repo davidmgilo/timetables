@@ -25,4 +25,9 @@ class Timeslot extends Model
     {
         return $this->belongsToMany(Shift::class)->withTimestamps();
     }
+
+    public function lessons()
+    {
+        return $this->hasMany(\Scool\Timetables\Models\Lesson::class);
+    }
 }

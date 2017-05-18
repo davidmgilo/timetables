@@ -23,6 +23,7 @@ class TimetablesSeeder extends Seeder
         $this->call(ShiftsSeeder::class);
         $this->call(TimeslotsSeeder::class);
         $this->call(LocationsSeeder::class);
+        $this->call(LessonsSeeder::class);
 //        $this->call(AttendancesSeeder::class);
     }
 }

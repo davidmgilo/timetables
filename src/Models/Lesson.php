@@ -67,7 +67,7 @@ class Lesson extends Model implements Transformable, Stateful
     }
 
     protected $states = [
-//        'draft' => ['inital' => true],
+        'draft' => ['inital' => true],
 //        'processing',
 //        'errored',
 //        'active',

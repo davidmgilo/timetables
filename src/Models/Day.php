@@ -31,4 +31,9 @@ class Day extends Model
         return "PROVA";
     }
 
+    public function lessons()
+    {
+        return $this->hasMany(\Scool\Timetables\Models\Lesson::class);
+    }
+
 }
