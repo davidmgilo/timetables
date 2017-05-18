@@ -34,16 +34,13 @@ class LessonsSeeder extends Seeder
        $timeslot->lessons()->save($lesson);
        $classroom->lessons()->save($lesson);
        $lesson->users()->save($user);
+       $lesson->step1step2();
     }
 
 
     /**
      * Creates a lesson
      *
-     * @param $location
-     * @param $day
-     * @param $timeslot
-     * @param $classroom
      * @return mixed
      */
     private function createLesson()

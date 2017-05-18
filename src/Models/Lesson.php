@@ -16,7 +16,7 @@ class Lesson extends Model implements Transformable, Stateful
 {
     use TransformableTrait, StatefulTrait;
 
-    protected $fillable = ['id','location_id','day_id','timeslot_id','classroom_id'];
+    protected $fillable = ['id','location_id','day_id','timeslot_id','classroom_id', 'state'];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
@@ -66,53 +66,44 @@ class Lesson extends Model implements Transformable, Stateful
         return $this->belongsToMany(\Submodule::class); //TODO
     }
 
+    /**
+     * States.
+     *
+     * @var array
+     */
     protected $states = [
-        'draft' => ['inital' => true],
-//        'processing',
-//        'errored',
-//        'active',
-//        'closed' => ['final' => true]
+        'step1' => ['initial' => true],
+        'step2' => ['final' => true]
     ];
-
+    /**
+     * Transaction State Transitions
+     *
+     * @var array
+     */
     protected $transitions = [
-//        'process' => [
-//            'from' => ['draft', 'errored'],
-//            'to' => 'processing'
-//        ],
-//        'activate' => [
-//            'from' => 'processing',
-//            'to' => 'active'
-//        ],
-//        'fail' => [
-//            'from' => 'processing',
-//            'to' => 'errored'
-//        ],
-//        'close' => [
-//            'from' => 'active',
-//            'to' => 'close'
-//        ]
+        'step1step2' => [
+            'from' => 'step1',
+            'to' => 'step2'
+        ],
+        'step2step1' => [
+            'from' => 'step2',
+            'to' => 'step1'
+        ]
     ];
-
-//    /**
-//     * @return bool
-//     */
-//    protected function validateProcess()
-//    {
-//        $validate = true;
-//        if (!$validate) {
-//            $this->addValidateProcessMessage();
-//        }
-//
-//        return $validate;
-//    }
-//
-//    /**
-//     * @return bool
-//     */
-//    protected function validateActivate()
-//    {
-//        //dd("validateActivate");
-//        return true;
-//    }
+    /**
+     * @return bool
+     */
+    protected function validateStep1step2()
+    {
+        if ($this->location_id != null) return true;
+        return false;
+    }
+    /**
+     * @return bool
+     */
+    protected function validateStep2step1()
+    {
+        return false;
+    }
 
 }

@@ -1,7 +1,6 @@
 {
     "version": 2,
     "paths": [
-        "../stateful-eloquent",
         "../l5-repository"
     ]
 }

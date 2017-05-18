@@ -7,8 +7,8 @@
         "scool/foundation": "dev-master",
         "acacha/l5-repository": "dev-master",
         "acacha/names": "dev-master",
-        "acacha/stateful-eloquent" : "dev-master",
-        "spatie/laravel-permission": "^1.6"
+        "spatie/laravel-permission": "^1.6",
+        "acacha/stateful-eloquent": "^0.1.8"
     },
     "license": "MIT",
     "authors": [
