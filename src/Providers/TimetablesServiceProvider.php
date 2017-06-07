@@ -120,9 +120,9 @@ class TimetablesServiceProvider extends ServiceProvider
 
     private function publishViews()
     {
-//        $this->publishes(
-//            [SCOOL_TIMETABLES_PATH.'/resources/views/attendances/index.blade.php' =>'resources/views/vendor/timetables/attendances/index.blade.php'],
-//            'scool_timetables'
-//        );
+        $this->publishes(
+            [SCOOL_TIMETABLES_PATH.'/resources/views/lessons/index.blade.php' =>'resources/views/vendor/timetables/lessons/index.blade.php'],
+            'scool_timetables'
+        );
     }
 }

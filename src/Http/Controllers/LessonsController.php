@@ -46,7 +46,7 @@ class LessonsController extends Controller
             ]);
         }
 
-        return view('lessons.index', compact('lessons'));
+        return view('timetables::lessons.index', compact('lessons'));
     }
 
     /**
