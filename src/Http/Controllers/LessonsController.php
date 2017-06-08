@@ -37,7 +37,7 @@ class LessonsController extends Controller
     public function index()
     {
         $this->repository->pushCriteria(app('Prettus\Repository\Criteria\RequestCriteria'));
-        $lessons = $this->repository->all();
+        $lessons = $this->repository->paginate(2);
 
         if (request()->wantsJson()) {
 
