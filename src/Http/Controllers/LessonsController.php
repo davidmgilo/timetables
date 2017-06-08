@@ -75,6 +75,12 @@ class LessonsController extends Controller
 
             $lesson = $this->repository->create($request->all());
 
+            if ($request->has('user_id')) {
+                $user_id = $request->input('user_id');
+                $user = \App\User::find($user_id);
+                $lesson->users()->save($user);
+            }
+
             $response = [
                 'message' => 'Lesson created.',
                 'data'    => $lesson->toArray(),
@@ -201,4 +207,5 @@ class LessonsController extends Controller
 
         return redirect()->back()->with('message', 'Lesson deleted.');
     }
+
 }

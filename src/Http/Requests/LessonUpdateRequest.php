@@ -15,7 +15,7 @@ class LessonUpdateRequest extends FormRequest
     {
 //        if(Auth::user()->can('edit attendances')) return true;
 
-        return false;
+        return true;
     }
 
     /**

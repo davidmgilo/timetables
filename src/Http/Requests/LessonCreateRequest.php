@@ -15,7 +15,7 @@ class LessonCreateRequest extends FormRequest
     {
         //recordar que s'ha de canviar cada cop
 //        if(Auth::user()->can('add attendances')) return true;
-        return false;
+        return true;
     }
 
     /**
