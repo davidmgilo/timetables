@@ -26,9 +26,11 @@ class LessonCreateRequest extends FormRequest
     public function rules()
     {
         return [
-            //          'notes' => 'required',
-//            'user_id' => 'required',
-            //TODO
+           'user_id' => 'nullable|integer',
+           'location_id' => 'nullable|integer',
+           'day_id' => 'nullable|integer',
+           'timeslot_id' => 'nullable|integer',
+           'classroom_id' => 'nullable|integer',
         ];
     }
 }
