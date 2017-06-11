@@ -26,8 +26,11 @@ class LessonUpdateRequest extends FormRequest
     public function rules()
     {
         return [
-            //'notes' => 'required',
-//            'user_id' => 'required',
+            'user_id' => 'nullable|integer',
+            'location_id' => 'nullable|integer',
+            'day_id' => 'nullable|integer',
+            'timeslot_id' => 'nullable|integer',
+            'classroom_id' => 'nullable|integer',
         ];
     }
 }

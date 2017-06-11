@@ -160,6 +160,12 @@ class LessonsController extends Controller
 
             $lesson = $this->repository->update($request->all(), $id);
 
+            if ($request->has('user_id')) {
+                $user_id = $request->input('user_id');
+                $user = \App\User::find($user_id);
+                $lesson->users()->save($user);
+            }
+
             $response = [
                 'message' => 'Lesson updated.',
                 'data'    => $lesson->toArray(),
