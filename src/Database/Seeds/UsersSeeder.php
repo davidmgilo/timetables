@@ -20,7 +20,7 @@ class UsersSeeder extends Seeder
     public function run()
     {
        $user = $this->createUser('Sergi Tur','sergitur@prova.com','123456');
-       $user->assignRole('manage attendances');
+       $user->assignRole('manage lessons');
     }
 
 
