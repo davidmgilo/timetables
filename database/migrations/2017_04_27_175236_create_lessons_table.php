@@ -37,6 +37,8 @@ class CreateLessonsTable extends Migration
             $table->integer('user_id')->unsigned();
             $table->timestamps();
             $table->unique(['lesson_id', 'user_id']);
+            $table->foreign('lesson_id')->references('id')->on('lessons')->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
         Schema::create('lesson_submodule', function (Blueprint $table) {
             $table->integer('lesson_id')->unsigned();

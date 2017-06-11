@@ -195,7 +195,10 @@ class LessonsController extends Controller
      */
     public function destroy($id)
     {
+        $lesson = $this->repository->find($id);
+        $lesson->users()->detach();
         $deleted = $this->repository->delete($id);
+
 
         if (request()->wantsJson()) {
 
