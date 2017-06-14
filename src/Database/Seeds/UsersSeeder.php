@@ -21,6 +21,7 @@ class UsersSeeder extends Seeder
     {
        $user = $this->createUser('Sergi Tur','sergitur@prova.com','123456');
        $user->assignRole('manage lessons');
+        $this->createUser('Usuari SP','user@prova.com','123456');
     }
 
 
