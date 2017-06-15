@@ -6,7 +6,9 @@ Route::group([
 //            Route::group(['middleware' => 'can:browse attendances'], function () {
 //                Route::resource('attendances', 'AttendancesController');
 //            });
-            Route::resource('lessons', 'LessonsController');
+            Route::group(['middleware' => 'can:browse lessons'], function () {
+                Route::resource('lessons', 'LessonsController');
+            });
         });
     });
 Route::group([
