@@ -4,19 +4,12 @@ All Notable changes to `timetables` will be documented in this file.
 
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) principles.
 
-## NEXT - YYYY-MM-DD
+## NEXT - 2017-6-15
 
 ### Added
-- Nothing
-
-### Deprecated
-- Nothing
+- Models finished
+- Migrations finished
 
 ### Fixed
-- Nothing
+- Lesson Controller working with eager loading on users and paginated.
 
-### Removed
-- Nothing
-
-### Security
-- Nothing

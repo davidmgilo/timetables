@@ -65,18 +65,12 @@ public function run()
 {
     ...
     $this->call(TimetablesSeeder::class);
-    $this->call(AttendancePermissionSeeder::class);
 }
 ```
 
+Remember to create the adequate permissions about lessons in a seeder. (browse lessons, add lessons, edit lessons, delete lessons). You can found an example [here](https://github.com/davidmgilo/timetables_test)
 
 
-## Usage
-
-``` php
-$skeleton = new scool\timetables();
-echo $skeleton->echoPhrase('Hello, League!');
-```
 
 ## Change log
 
@@ -85,7 +79,7 @@ Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recen
 ## Testing
 
 ``` bash
-$ composer test
+$ phpunit
 ```
 ## See more
 
@@ -97,13 +91,19 @@ On the documentation via sami:
 
 [Docs](https://davidmgilo.github.io/TimetablesDocs/)
 
+### Other links
+
+* [Package](https://github.com/davidmgilo/timetables)
+* [Test Package](https://github.com/davidmgilo/timetables_test)
+* [Official Page](https://davidmgilo.github.io/LandingPage/)
+* [Demo](http://timetables.davidmartinez.sintesi.acacha.org:8080)
+* [API Docs](https://davidmgilo.github.io/TimetablesDocs/)
+* [Packagist](https://packagist.org/packages/davidmgilo/timetables)
+* [Presentation](https://davidmgilo.github.io/timetables-presentation/#/)
+
 ## Contributing
 
 Please see [CONTRIBUTING](CONTRIBUTING.md) and [CONDUCT](CONDUCT.md) for details.
-
-## Security
-
-If you discover any security related issues, please email davidmgilo@gmail.com instead of using the issue tracker.
 
 ## Credits
 
