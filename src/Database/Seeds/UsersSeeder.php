@@ -5,7 +5,6 @@ namespace Scool\Timetables\Database\Seeds;
 use Illuminate\Database\Seeder;
 use Scool\Timetables\Models\Classroom;
 
-
 /**
  * Class UsersSeeder
  * @package Scool\Timetables\Database\Seeds
@@ -19,9 +18,9 @@ class UsersSeeder extends Seeder
      */
     public function run()
     {
-       $user = $this->createUser('Sergi Tur','sergitur@prova.com','123456');
-       $user->assignRole('manage lessons');
-        $this->createUser('Usuari SP','user@prova.com','123456');
+        $user = $this->createUser('Sergi Tur', 'sergitur@prova.com', '123456');
+        $user->assignRole('manage lessons');
+        $this->createUser('Usuari SP', 'user@prova.com', '123456');
     }
 
 
@@ -33,7 +32,7 @@ class UsersSeeder extends Seeder
      */
     private function createUser($name, $email, $password)
     {
-       return \App\User::firstOrCreate([
+        return \App\User::firstOrCreate([
             'name' => $name,
             'email' => $email,
             'password' => bcrypt($password)

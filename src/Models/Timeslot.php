@@ -5,7 +5,6 @@ namespace Scool\Timetables\Models;
 use Acacha\Names\Traits\Nameable;
 use Illuminate\Database\Eloquent\Model;
 
-
 /**
  * Class Timeslot
  * @package Scool\Timetables\Models

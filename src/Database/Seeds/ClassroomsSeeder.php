@@ -5,7 +5,6 @@ namespace Scool\Timetables\Database\Seeds;
 use Illuminate\Database\Seeder;
 use Scool\Timetables\Models\Classroom;
 
-
 /**
  * Class ClassroomsSeeder
  * @package Scool\Timetables\Database\Seeds
@@ -22,7 +21,6 @@ class ClassroomsSeeder extends Seeder
         $this->createClassroom('2DAM');
         $this->createClassroom('2ASIX');
         $this->createClassroom('1ASIX/DAM');
-
     }
 
     /**

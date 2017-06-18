@@ -14,7 +14,9 @@ class LessonUpdateRequest extends FormRequest
      */
     public function authorize()
     {
-       if(Auth::user()->can('edit lessons')) return true;
+        if (Auth::user()->can('edit lessons')) {
+            return true;
+        }
 
         return false;
     }

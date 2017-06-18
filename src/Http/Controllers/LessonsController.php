@@ -40,7 +40,6 @@ class LessonsController extends Controller
         $lessons = $this->repository->with(['users'])->paginate(2);
 
         if (request()->wantsJson()) {
-
             return response()->json([
                 'data' => $lessons,
             ]);
@@ -68,9 +67,7 @@ class LessonsController extends Controller
      */
     public function store(LessonCreateRequest $request)
     {
-
         try {
-
             $this->validator->with($request->all())->passesOrFail(ValidatorInterface::RULE_CREATE);
 
             $lesson = $this->repository->create($request->all());
@@ -87,7 +84,6 @@ class LessonsController extends Controller
             ];
 
             if ($request->wantsJson()) {
-
                 return response()->json($response);
             }
 
@@ -117,7 +113,6 @@ class LessonsController extends Controller
         $lesson = $this->repository->find($id);
 
         if (request()->wantsJson()) {
-
             return response()->json([
                 'data' => $lesson,
             ]);
@@ -136,7 +131,6 @@ class LessonsController extends Controller
      */
     public function edit($id)
     {
-
         $lesson = $this->repository->find($id);
 
         return view('lessons.edit', compact('lesson'));
@@ -153,9 +147,7 @@ class LessonsController extends Controller
      */
     public function update(LessonUpdateRequest $request, $id)
     {
-
         try {
-
             $this->validator->with($request->all())->passesOrFail(ValidatorInterface::RULE_UPDATE);
 
             $lesson = $this->repository->update($request->all(), $id);
@@ -172,15 +164,12 @@ class LessonsController extends Controller
             ];
 
             if ($request->wantsJson()) {
-
                 return response()->json($response);
             }
 
             return redirect()->back()->with('message', $response['message']);
         } catch (ValidatorException $e) {
-
             if ($request->wantsJson()) {
-
                 return response()->json([
                     'error'   => true,
                     'message' => $e->getMessageBag()
@@ -207,7 +196,6 @@ class LessonsController extends Controller
 
 
         if (request()->wantsJson()) {
-
             return response()->json([
                 'message' => 'Lesson deleted.',
                 'deleted' => $deleted,
@@ -216,5 +204,4 @@ class LessonsController extends Controller
 
         return redirect()->back()->with('message', 'Lesson deleted.');
     }
-
 }
