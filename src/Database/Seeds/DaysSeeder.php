@@ -18,14 +18,13 @@ class DaysSeeder extends Seeder
      */
     public function run()
     {
-        $this->createDay('Dilluns',1,true);
-        $this->createDay('Dimarts',2,true);
-        $this->createDay('Dimecres',3,true);
-        $this->createDay('Dijous',4,true);
-        $this->createDay('Divendres',5,true);
-        $this->createDay('Dissabte',6,false);
-        $this->createDay('Diumenge',7,false);
-
+        $this->createDay('Dilluns', 1, true);
+        $this->createDay('Dimarts', 2, true);
+        $this->createDay('Dimecres', 3, true);
+        $this->createDay('Dijous', 4, true);
+        $this->createDay('Divendres', 5, true);
+        $this->createDay('Dissabte', 6, false);
+        $this->createDay('Diumenge', 7, false);
     }
 
     /**

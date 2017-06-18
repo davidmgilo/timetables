@@ -100,7 +100,9 @@ class Lesson extends Model implements Transformable, Stateful
      */
     protected function validateStep1step2()
     {
-        if ($this->location_id != null) return true;
+        if ($this->location_id != null) {
+            return true;
+        }
         return false;
     }
     /**
@@ -110,5 +112,4 @@ class Lesson extends Model implements Transformable, Stateful
     {
         return false;
     }
-
 }

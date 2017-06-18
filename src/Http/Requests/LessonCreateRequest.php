@@ -15,7 +15,9 @@ class LessonCreateRequest extends FormRequest
     public function authorize()
     {
         //recordar que s'ha de canviar cada cop
-        if(Auth::user()->can('add lessons')) return true;
+        if (Auth::user()->can('add lessons')) {
+            return true;
+        }
         return false;
     }
 

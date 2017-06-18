@@ -26,7 +26,7 @@ class TimetablesServiceProvider extends ServiceProvider
         $this->registerPermissionServiceProvider();
         $this->registerStatefulEloquentServiceProvider();
 
-        $this->app->bind(\Scool\Timetables\Repositories\LessonRepository::class, 
+        $this->app->bind(\Scool\Timetables\Repositories\LessonRepository::class,
             \Scool\Timetables\Repositories\LessonRepositoryEloquent::class);
         //:end-bindings:
     }
@@ -107,7 +107,6 @@ class TimetablesServiceProvider extends ServiceProvider
     private function registerStatefulEloquentServiceProvider()
     {
         $this->app->register(StatefulServiceProvider::class);
-
     }
 
     /**

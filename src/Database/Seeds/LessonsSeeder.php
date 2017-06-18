@@ -9,7 +9,6 @@ use Scool\Timetables\Models\Lesson;
 use Scool\Timetables\Models\Location;
 use Scool\Timetables\Models\Timeslot;
 
-
 /**
  * Class LessonsSeeder
  * @package Scool\Timetables\Database\Seeds
@@ -23,21 +22,21 @@ class LessonsSeeder extends Seeder
      */
     public function run()
     {
-       $user = \App\User::find(2);
-       $location = Location::find(3);
-       $day = Day::find(2);
-       $timeslot = Timeslot::find(7);
-       $classroom = Classroom::find(1);
-       $lesson = $this->createLesson();
-       $location->lessons()->save($lesson);
-       $day->lessons()->save($lesson);
-       $timeslot->lessons()->save($lesson);
-       $classroom->lessons()->save($lesson);
-       $lesson->users()->save($user);
-       $lesson->step1step2();
+        $user = \App\User::find(2);
+        $location = Location::find(3);
+        $day = Day::find(2);
+        $timeslot = Timeslot::find(7);
+        $classroom = Classroom::find(1);
+        $lesson = $this->createLesson();
+        $location->lessons()->save($lesson);
+        $day->lessons()->save($lesson);
+        $timeslot->lessons()->save($lesson);
+        $classroom->lessons()->save($lesson);
+        $lesson->users()->save($user);
+        $lesson->step1step2();
        //Second lesson - same day - hours touching
        $timeslot = Timeslot::find(8);
-       $lesson = $this->createLesson();
+        $lesson = $this->createLesson();
         $location->lessons()->save($lesson);
         $day->lessons()->save($lesson);
         $timeslot->lessons()->save($lesson);
@@ -63,7 +62,7 @@ class LessonsSeeder extends Seeder
      */
     private function createLesson()
     {
-       return Lesson::Create([]);
+        return Lesson::Create([]);
 //       $lesson->days()->save(Day::find($day));
 //       $lesson->timeslots()->save(Timeslot::find($timeslot));
 //       $lesson->classrooms()->save(Classroom::find($classroom));
