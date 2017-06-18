@@ -7,6 +7,7 @@ use Acacha\Stateful\Traits\StatefulTrait;
 use Illuminate\Database\Eloquent\Model;
 use Prettus\Repository\Contracts\Transformable;
 use Prettus\Repository\Traits\TransformableTrait;
+use Scool\Timetables\Events\LessonCreated;
 
 /**
  * Class Lesson
@@ -17,6 +18,10 @@ class Lesson extends Model implements Transformable, Stateful
     use TransformableTrait, StatefulTrait;
 
     protected $fillable = ['id','location_id','day_id','timeslot_id','classroom_id', 'state'];
+
+    protected $events = [
+        'created' => LessonCreated::class
+    ];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
